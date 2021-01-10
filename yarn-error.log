@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js dev:server
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add reflect-metadaata
 
 PATH: 
   C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Python27\;C:\Python27\Scripts;C:\Program Files\AdoptOpenJDK\jdk8u202-b08-jre\bin;C:\Program Files (x86)\AdoptOpenJDK\jdk8u202-b08-jre\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\Program Files\MongoDB\Server\4.4\bin;C:\Program Files\Java\jdk1.8.0_211\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\Leonardo\AppData\Local\Microsoft\WindowsApps;C:\Users\Leonardo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Leonardo\AppData\Local\GitHubDesktop\bin;C:\Users\Leonardo\AppData\Roaming\npm;C:\Users\Leonardo\AppData\Local\Yarn\bin;
@@ -14,12 +14,17 @@ Platform:
   win32 x64
 
 Trace: 
-  SyntaxError: C:\projetosJS\aulasGOSTACK\iniciando-back-end\package.json: Unexpected token / in JSON at position 218
-      at JSON.parse (<anonymous>)
-      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
-      at Generator.next (<anonymous>)
-      at step (C:\Program Files (x86)\Yarn\lib\cli.js:310:30)
-      at C:\Program Files (x86)\Yarn\lib\cli.js:321:13
+  Error: https://registry.yarnpkg.com/reflect-metadaata: Not found
+      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66096:18)
+      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140748:22)
+      at Request.emit (events.js:223:5)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141720:10)
+      at Request.emit (events.js:223:5)
+      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141642:12)
+      at Object.onceWrapper (events.js:312:28)
+      at IncomingMessage.emit (events.js:228:7)
+      at endReadableNT (_stream_readable.js:1185:12)
+      at processTicksAndRejections (internal/process/task_queues.js:81:21)
 
 npm manifest: 
   {
@@ -29,7 +34,7 @@ npm manifest:
     "license": "MIT",
     "scripts": {
       "build": "tsc",
-      "dev:server": "ts-node-dev --inspect --ignore-watch node_modules src/server.ts", //--transpileOnly
+      "dev:server": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
       "start": "ts-node src/index.ts",
       "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
       "test": "cross-env NODE_ENV=test jest"
@@ -37,6 +42,7 @@ npm manifest:
     "dependencies": {
       "@types/csv-parse": "^1.2.2",
       "csv-parse": "^4.8.8",
+      "date-fns": "^2.16.1",
       "dotenv": "^8.2.0",
       "express": "^4.17.1",
       "express-async-errors": "^3.1.1",
@@ -1670,6 +1676,11 @@ Lockfile:
       abab "^2.0.0"
       whatwg-mimetype "^2.2.0"
       whatwg-url "^7.0.0"
+  
+  date-fns@^2.16.1:
+    version "2.16.1"
+    resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.16.1.tgz#05775792c3f3331da812af253e1a935851d3834b"
+    integrity sha512-sAJVKx/FqrLYHAQeN7VpJrPhagZc9R4ImZIWYRFZaaohR3KzmuK88touwsSwSVT8Qcbd4zoDsnGfX4GFB4imyQ==
   
   dateformat@~1.0.4-1.2.3:
     version "1.0.12"
