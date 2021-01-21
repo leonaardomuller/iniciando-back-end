@@ -21,7 +21,7 @@ usersRouter.post('/', async (request, response) => {
     password,
   });
 
-  delete user.password; // eslint-disable
+  delete user.password;
 
   return response.json(user);
 });
