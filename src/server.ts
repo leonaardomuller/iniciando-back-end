@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 
 import cors from 'cors';
-// Atualizado
+
 import express, { Request, Response, NextFunction } from 'express';
 
 import 'express-async-errors';
