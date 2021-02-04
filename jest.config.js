@@ -3,7 +3,7 @@
  * https://jestjs.io/docs/en/configuration.html
  */
 
- export default {
+ module.exports = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -174,10 +174,10 @@
   // transform: undefined,
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-  transformIgnorePatterns: [
-    '/node_modules/(?!react-select)',
-    '/node_modules/(?!react-day-picker)',
-  ],
+  // transformIgnorePatterns: [
+  //   '/node_modules/(?!react-select)',
+  //   '/node_modules/(?!react-day-picker)',
+  // ],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
   // unmockedModulePathPatterns: undefined,
