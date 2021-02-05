@@ -16,7 +16,7 @@ describe('CreateUser', () => {
     const user = await createUser.execute({
       name: 'Jhon Doe',
       email: 'johndoe@example.com',
-      password: 'john123',
+      password: '123456',
     });
 
     expect(user).toHaveProperty('id');
@@ -33,14 +33,14 @@ describe('CreateUser', () => {
     await createUser.execute({
       name: 'Jhon Doe',
       email: 'johndoe@example.com',
-      password: 'john123',
+      password: '123456',
     });
 
     expect(
       createUser.execute({
         name: 'Jhon Doe',
         email: 'johndoe@example.com',
-        password: 'john123',
+        password: '123456',
       }),
     ).rejects.toBeInstanceOf(AppError);
   });
