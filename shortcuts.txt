@@ -1,0 +1,7 @@
+docker run --name gostack_postgres -e POSTGRES_PASSWORD=docker -p 5432:5432 postgres
+
+docker run --name mongodb -p 27017:27017 -d -t mongo  
+
+docker start mongodb
+
+a9485102ef9ed0f5fe1452cebcc180b41ba5c99c30efcbad365c38f328768814
