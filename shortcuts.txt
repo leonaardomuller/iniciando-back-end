@@ -1,12 +1,12 @@
 docker run --name gostack_postgres -e POSTGRES_PASSWORD=docker -p 5432:5432 postgres
-docker start postgres
+docker start gostack_postgres
 
 docker run --name redis -p 6379:6379 -d -t redis:alpine
-docker start redis 
+docker start redis
 
-docker run --name mongodb -p 27017:27017 -d -t mongo  
+docker run --name mongodb -p 27017:27017 -d -t mongo
 docker start mongodb
 
-docker start redis 
+docker start redis
 
 a9485102ef9ed0f5fe1452cebcc180b41ba5c99c30efcbad365c38f328768814
